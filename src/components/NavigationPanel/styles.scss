@@ -1,6 +1,45 @@
 @import '../../styles/_variables';
 
 nav {
-  font-weight: 500;
-  color: $red-rufous-base;
+  border-right: 1px solid $black-32;
+  max-width: 280px;
+}
+
+.top-container {
+  padding: 40px 35px 32px 40px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  &__collapse-btn {
+    cursor: pointer;
+    height: 10px;
+
+    &__icon {
+      height: 2px;
+      width: 18px;
+      background: $black-87;
+      border-radius: 2px;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 18px;
+        background: $black-87;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      &::before {
+        margin-top: 4px;
+      }
+
+      &::after {
+        margin-top: 8px;
+      }
+    }
+  }
 }

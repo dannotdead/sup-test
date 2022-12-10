@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { getSupplementsList } from './utils/axiosManager'
 import { useAppDispatch } from './redux/hook'
 import { addAllSupplements } from './redux/slices/supplementsSlice'
-import SupplementsList from './components/SupplementsList'
 import NavigationPanel from './components/NavigationPanel'
 
 const App: React.FC = () => {
@@ -17,9 +16,6 @@ const App: React.FC = () => {
   return (
     <>
       <NavigationPanel />
-      <div>{process.env.REACT_APP_AUTH_PASSWORD}</div>
-      <div>{process.env.REACT_APP_BASE_URL}</div>
-      <SupplementsList />
     </>
   )
 }

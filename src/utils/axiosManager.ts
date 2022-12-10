@@ -1,6 +1,14 @@
 import axios from 'axios'
+import { Supplement } from '../redux/slices/supplementsSlice'
 
-export const getSupplementsList = async (baseURL = '') => {
+type SupplementsResponse = {
+  PartnerLogo: string
+  SupplementsList: Supplement[]
+}
+
+export const getSupplementsList = async (
+  baseURL = ''
+): Promise<SupplementsResponse> => {
   const config = {
     headers: {
       accept: 'application/json',

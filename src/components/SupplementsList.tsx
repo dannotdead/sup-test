@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAppSelector } from '../redux/hook'
 
-const SupplementsList = () => {
+const SupplementsList: React.FC = () => {
   const supplementsList = useAppSelector((state) => state.supplements.list)
 
   return (

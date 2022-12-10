@@ -3,8 +3,9 @@ import { getSupplementsList } from './utils/axiosManager'
 import { useAppDispatch } from './redux/hook'
 import { addAllSupplements } from './redux/slices/supplementsSlice'
 import SupplementsList from './components/SupplementsList'
+import NavigationPanel from './components/NavigationPanel'
 
-const App = () => {
+const App: React.FC = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
@@ -15,6 +16,7 @@ const App = () => {
 
   return (
     <>
+      <NavigationPanel />
       <div>{process.env.REACT_APP_AUTH_PASSWORD}</div>
       <div>{process.env.REACT_APP_BASE_URL}</div>
       <SupplementsList />

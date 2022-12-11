@@ -3,6 +3,8 @@ import { getSupplementsList } from './utils/axiosManager'
 import { useAppDispatch } from './redux/hook'
 import { addAllSupplements } from './redux/slices/supplementsSlice'
 import NavigationPanel from './components/NavigationPanel'
+import SupplementsList from './components/SupplementsList'
+import SideBar from './components/SideBar'
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -14,9 +16,11 @@ const App: React.FC = () => {
   }, [])
 
   return (
-    <>
+    <main>
       <NavigationPanel />
-    </>
+      <SupplementsList />
+      <SideBar />
+    </main>
   )
 }
 

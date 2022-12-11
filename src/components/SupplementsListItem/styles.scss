@@ -1,0 +1,41 @@
+@import '../../styles/_variables';
+
+.list-item {
+  border-bottom: 1px solid $black-16;
+
+  td {
+    padding: 8px 16px 8px 0;
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      height: 100px;
+      gap: 25px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
+
+  &__text-bold {
+    font-weight: 700;
+  }
+
+  &__button {
+    border: 2px solid $extra-blue;
+    border-radius: 40px;
+    background: transparent;
+    color: $extra-blue;
+    cursor: pointer;
+    padding: 0 16px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

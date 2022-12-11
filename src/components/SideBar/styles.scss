@@ -1,1 +1,45 @@
 @import '../../styles/_variables';
+
+.sidebar-container {
+  max-width: 280px;
+  width: 100%;
+  background: $gray-cultured;
+  border-left: 1px solid $black-32;
+  padding: 42px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    img {
+      transform: rotate(90deg);
+    }
+
+    span {
+      color: $black-87;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    div {
+      display: flex;
+      gap: 16px;
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

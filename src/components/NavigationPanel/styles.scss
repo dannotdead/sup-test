@@ -1,8 +1,11 @@
 @import '../../styles/_variables';
 
 nav {
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid $black-32;
   max-width: 280px;
+  height: 100vh;
 }
 
 .top-container {
@@ -11,35 +14,73 @@ nav {
   align-items: center;
   gap: 50px;
 
-  &__collapse-btn {
+  &__button {
     cursor: pointer;
-    height: 10px;
+    border: none;
+    background: transparent;
+  }
 
-    &__icon {
-      height: 2px;
-      width: 18px;
-      background: $black-87;
-      border-radius: 2px;
+  &__tooltip {
+    position: absolute;
+    margin-left: 220px;
+    background: $black-72;
+    color: $clear-white;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 16px;
+    border-radius: 2px;
+  }
+}
 
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 2px;
-        width: 18px;
-        background: $black-87;
-        border-radius: 2px;
-        cursor: pointer;
-      }
+.controls {
+  height: 100%;
+  font-size: 16px;
+  line-height: 16px;
 
-      &::before {
-        margin-top: 4px;
-      }
+  &__list {
+    cursor: pointer;
 
-      &::after {
-        margin-top: 8px;
+    article {
+      font-weight: 500;
+      padding: 12px 40px;
+    }
+
+    ul div {
+      list-style-type: none;
+      padding: 10px 56px;
+    }
+
+    &:first-child,
+    &:nth-child(2) {
+      border-bottom: 1px solid $gray;
+    }
+
+    &:last-child {
+      article {
+        display: flex;
+        gap: 100px;
       }
     }
+  }
+}
+
+.active-list-item {
+  background: $blue-base;
+  color: $clear-white;
+}
+
+.bottom-container {
+  background: $black-4;
+  height: 52px;
+  padding: 14px 40px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    font-size: 14px;
+    background: transparent;
+    cursor: pointer;
   }
 }

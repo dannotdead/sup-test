@@ -3,6 +3,8 @@ import { Supplement } from '../../redux/slices/supplementsSlice'
 import Modal from '../Modal'
 import './styles.scss'
 import Button from '../UI/Button/Button'
+import { useAppSelector } from '../../redux/hook'
+import clsx from 'clsx'
 
 interface SupplementProps {
   supplement: Supplement
@@ -10,6 +12,10 @@ interface SupplementProps {
 
 const SupplementsListItem: React.FC<SupplementProps> = ({ supplement }) => {
   const [isOpenModal, setIsOpenModal] = useState(false)
+  const courseList = useAppSelector((state) => state.course.list)
+  const isContainInCourse = courseList.some(
+    (item) => item.Article === supplement.Article
+  )
 
   return (
     <>
@@ -25,7 +31,11 @@ const SupplementsListItem: React.FC<SupplementProps> = ({ supplement }) => {
           <span>{supplement.CurrentPrices} ₽</span>
         </td>
         <td>
-          <Button title='Добавить' click={() => setIsOpenModal(true)} />
+          <Button
+            title={`${isContainInCourse ? 'Добавлено' : 'Добавить'}`}
+            click={() => !isContainInCourse && setIsOpenModal(true)}
+            classNames={clsx({ contain: isContainInCourse })}
+          />
         </td>
       </tr>
 

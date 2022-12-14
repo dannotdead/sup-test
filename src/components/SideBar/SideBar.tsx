@@ -15,7 +15,10 @@ const SideBar: React.FC = () => {
 
       <div className='sidebar-container__list'>
         {courseList.map((item) => (
-          <span key={item.Article}>{item.GoodsCommercialName}</span>
+          <div key={item.Article}>
+            <img src={item.Picture} alt='' />
+            <span>{item.GoodsCommercialName}</span>
+          </div>
         ))}
       </div>
     </aside>

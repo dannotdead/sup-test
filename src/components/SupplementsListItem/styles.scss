@@ -2,20 +2,16 @@
 
 .list-item {
   border-bottom: 1px solid $black-16;
+  padding: 8px 0;
 
-  td {
-    padding: 8px 16px 8px 0;
+  &:first-child {
+    display: flex;
+    align-items: center;
+  }
 
-    &:first-child {
-      display: flex;
-      align-items: center;
-      height: 100px;
-      gap: 25px;
-    }
-
-    &:last-child {
-      padding: 0;
-    }
+  &:nth-child(n + 2) {
+    display: flex;
+    align-items: center;
   }
 
   &__logo {

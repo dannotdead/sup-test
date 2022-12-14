@@ -13,8 +13,12 @@ const SupplementsListItem: React.FC<SupplementProps> = ({ supplement }) => {
         <img src={supplement.Picture} alt='' className='list-item__logo' />
         <span>{supplement.GoodsCommercialName}</span>
       </td>
-      <td>{supplement.CommercialDescription}</td>
-      <td className='list-item__text-bold'>{supplement.CurrentPrices}</td>
+      <td>
+        <span>{supplement.CommercialDescription}</span>
+      </td>
+      <td className='list-item__text-bold'>
+        <span>{supplement.CurrentPrices} ₽</span>
+      </td>
       <td>
         <button className='list-item__button'>Добавить</button>
       </td>

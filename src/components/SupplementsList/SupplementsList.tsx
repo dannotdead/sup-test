@@ -8,23 +8,21 @@ const SupplementsList: React.FC = () => {
 
   return (
     <section>
-      <div className='list-container'>
-        <table>
-          <thead>
-            <tr>
-              <th>Биодобавка</th>
-              <th>Описание</th>
-              <th>Цена за шт., ₽</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {supplementsList.map((supplement, index) => (
-              <SupplementsListItem key={index} supplement={supplement} />
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <table className='list-container'>
+        <thead>
+          <tr>
+            <th>Биодобавка</th>
+            <th>Описание</th>
+            <th>Цена за шт., ₽</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {supplementsList.map((supplement, index) => (
+            <SupplementsListItem key={index} supplement={supplement} />
+          ))}
+        </tbody>
+      </table>
     </section>
   )
 }

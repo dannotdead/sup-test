@@ -8,19 +8,21 @@ import LogoColored from '../../assets/svg/LogoColored.svg'
 import LogIn from '../../assets/svg/LogIn.svg'
 import MenuIcon from '../../assets/svg/MenuIcon.svg'
 import AngleArrow from '../../assets/svg/AngleArrow.svg'
-import AntiAge from '../../assets/svg/components/AntiAge'
-import Antioxidants from '../../assets/svg/components/Antioxidants'
-import AntiStress from '../../assets/svg/components/AntiStress'
-import WomenHealth from '../../assets/svg/components/WomenHealth'
-import HealthySleep from '../../assets/svg/components/HealthySleep'
-import Skin from '../../assets/svg/components/Skin'
-import Immunity from '../../assets/svg/components/Immunity'
-import MenHealth from '../../assets/svg/components/MenHealth'
-import Omega from '../../assets/svg/components/Omega'
-import Memory from '../../assets/svg/components/Memory'
-import Harmony from '../../assets/svg/components/Harmony'
-import Calmness from '../../assets/svg/components/Calmness'
-import Joints from '../../assets/svg/components/Joints'
+import {
+  AntiAge,
+  Antioxidants,
+  AntiStress,
+  WomenHealth,
+  HealthySleep,
+  Skin,
+  Immunity,
+  MenHealth,
+  Omega,
+  Memory,
+  Harmony,
+  Calmness,
+  Joints,
+} from '../../assets/svg/components'
 import './styles.scss'
 
 const catalogList = [

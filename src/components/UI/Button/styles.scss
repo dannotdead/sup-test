@@ -1,0 +1,18 @@
+@import '../../../styles/_variables';
+
+.button {
+  border: 2px solid $extra-blue;
+  border-radius: 40px;
+  background: transparent;
+  color: $extra-blue;
+  cursor: pointer;
+  padding: 0 16px;
+  height: 36px;
+  font-size: 16px;
+
+  &:hover {
+    background: $extra-blue;
+    color: $clear-white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+}

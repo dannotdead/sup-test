@@ -83,7 +83,6 @@ section {
   }
 
   &:last-child {
-    width: 130px;
     align-self: center;
     width: fit-content;
   }
@@ -95,4 +94,15 @@ section {
   margin-right: 12px;
   font-size: 16px;
   text-align: left;
+}
+
+.list-container > thead > tr > th {
+  &:first-child {
+    gap: 7px;
+  }
+
+  &:nth-child(3) {
+    display: flex;
+    gap: 7px;
+  }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAppSelector } from '../../redux/hook'
 import SupplementsListItem from '../SupplementsListItem'
+import TableIcon from '../../assets/svg/TableIcon.svg'
 import './styles.scss'
 
 const SupplementsList: React.FC = () => {
@@ -11,9 +12,14 @@ const SupplementsList: React.FC = () => {
       <table className='list-container'>
         <thead>
           <tr>
-            <th>Биодобавка</th>
+            <th>
+              <span>Биодобавка</span>
+              <img src={TableIcon} alt='' />
+            </th>
             <th>Описание</th>
-            <th>Цена за шт., ₽</th>
+            <th>
+              Цена за шт., ₽ <img src={TableIcon} alt='' />
+            </th>
             <th></th>
           </tr>
         </thead>

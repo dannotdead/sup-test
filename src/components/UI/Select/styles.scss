@@ -1,0 +1,15 @@
+@import '../../../styles/_variables';
+
+.select {
+  padding: 8px 32px 8px 16px;
+  height: 44px;
+  border: 1px solid $black-16;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  appearance: none;
+  background-image: url('../../../assets/svg/AngleArrow.svg');
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 18px;
+}

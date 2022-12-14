@@ -46,6 +46,54 @@
       }
     }
 
+    &__controls {
+      display: flex;
+      gap: 16px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: fit-content;
+        font-size: 12px;
+        line-height: 14px;
+
+        &:first-child {
+          width: 204px;
+        }
+
+        &:nth-child(2) {
+          width: 118px;
+        }
+
+        &:nth-child(3) {
+          margin-left: 16px;
+        }
+
+        &:last-child {
+          width: 145px;
+        }
+      }
+
+      &__input {
+        background: #ffffff;
+        border: 1px solid $black-16;
+        border-radius: 8px;
+        padding: 12px 16px;
+        height: 44px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 76px;
+      }
+
+      &__del-button {
+        margin-top: 20px;
+        margin-left: 4px;
+        cursor: pointer;
+      }
+    }
+
     &__body {
       display: flex;
       flex-direction: column;
